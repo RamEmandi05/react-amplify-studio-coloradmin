@@ -1,0 +1,23 @@
+import ReactTags from 'react-tag-autocomplete';
+
+state = {
+  suggestions: [
+    { id: 3, name: 'Bananas' },
+    { id: 4, name: 'Mangos' },
+    { id: 5, name: 'Lemons' },
+    { id: 6, name: 'Apricots' }
+  ]
+}
+handleDelete = (i) => {
+  const tags = tags.slice(0)
+  tags.splice(i, 1)
+  setState({ tags })
+}
+
+handleAddition = (tag) => {
+  const tags = [].concat(tags, tag)
+  setState({ tags })
+}
+
+<!-- html -->
+<ReactTags tags={tags} suggestions={suggestions} onDelete={handleDelete.bind(this)} onAddition={handleAddition.bind(this)} />

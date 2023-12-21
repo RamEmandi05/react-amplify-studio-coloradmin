@@ -1,0 +1,24 @@
+type Organizations @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  assignedDevices: String
+  totalDevices: String
+  users: String
+  cell: String
+  authcode: String
+  name: String
+  email: String
+  billingAddresstimezone: String
+  billingAddressaddress: String
+  billingAddresscountry: String
+  billingAddressstate: String
+  billingAddresspostalCode: String
+  billingAddresscity: String
+  createdAt: String
+}
+
+type Todo @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+}
+ 

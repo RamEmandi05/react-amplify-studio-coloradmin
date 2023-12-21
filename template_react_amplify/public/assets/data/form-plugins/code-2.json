@@ -1,0 +1,69 @@
+import Select from 'react-select';
+
+selectOptions = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+];
+styles = {
+  control: styles => ({ 
+    backgroundColor: 'var(--bs-component-bg)', 
+    color: 'var(--bs-component-color)',
+    border: '1px solid var(--bs-component-border-color)',
+    borderRadius: '4px',
+    display: 'flex'
+  }),
+  indicatorSeparator: styles => ({
+    backgroundColor: 'transparent'
+  }),
+  input: styles => ({
+    color: 'var(--bs-component-color)',
+    fontWeight: '600',
+    gridArea: '1/1/2/3',
+    flex: '1 1 auto',
+    display: 'inline-grid',
+    margin: '2px',
+    gridTemplateColumns: '0 min-content',
+    boxSizing: 'content-box',
+    paddingTop: '2px',
+    paddingBottom: '2px',
+    visibility: 'visible'
+  }),
+  singleValue: styles => ({
+    color: 'var(--bs-component-color)',
+    gridArea: '1/1/2/3',
+    marginLeft: '2px',
+    marginRight: '2px',
+    maxWidth: '100%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    boxSizing: 'border-box'
+  }),
+  placeholder: styles => ({
+    color: 'rgba(var(--bs-component-color-rgb), .5)',
+    fontWeight: '600',
+    gridArea: '1/1/2/3'
+  }),
+  menu: styles => ({
+    backgroundColor: 'var(--bs-component-dropdown-bg)',
+    position: 'absolute',
+    top: '100%',
+    borderRadius: '4px',
+    margin: '8px 0',
+    zIndex: '1',
+    boxSizing: 'border-box',
+    width: '100%'
+  }),
+  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    return {
+      backgroundColor: isFocused ? 'var(--bs-component-dropdown-hover-bg)' : '',
+      color: 'var(--bs-component-color)',
+      cursor: isDisabled ? 'not-allowed' : 'default',
+      padding: '8px 12px'
+    };
+  }
+};
+
+<!-- html -->
+<Select options={selectOptions} styles={styles} />
