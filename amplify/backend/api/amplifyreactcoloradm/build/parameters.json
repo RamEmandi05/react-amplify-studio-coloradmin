@@ -1,0 +1,8 @@
+{
+    "AppSyncApiName": "amplifyreactcoloradm",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthModeLastUpdated": "2023-12-20T13:09:12.576Z",
+    "S3DeploymentBucket": "amplify-amplifyreactcoloradm-dev-182801-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/e0cac10a2866d7f94d9280b1c5c626c9810386f8"
+}
